@@ -31,8 +31,8 @@ Our channel: @darkm00n_fuck
 
 Select an action:
 
-    1. Create session
-    2. Run clicker
+    1. Run clicker
+    2. Create session
 """
 
 global tg_clients
@@ -103,9 +103,9 @@ async def process() -> None:
                 action = int(action)
                 break
 
-    if action == 1:
+    if action == 2:
         await register_sessions()
-    elif action == 2:
+    elif action == 1:
         tg_clients = await get_tg_clients()
 
         await run_tasks(tg_clients=tg_clients)
